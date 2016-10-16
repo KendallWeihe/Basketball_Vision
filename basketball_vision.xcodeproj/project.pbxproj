@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		056CFA71BFD3652B367CD1CC /* Pods_basketball_visionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9750507EA38B38E75B7965D1 /* Pods_basketball_visionUITests.framework */; };
+		3C835ED2A3A8C987D811548D /* Pods_basketball_vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999D6EC5335F077BE0B0FC71 /* Pods_basketball_vision.framework */; };
+		3EA7E6A3070B18673F4A1702 /* Pods_basketball_visionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7D38F2EF021E2A70629AA1 /* Pods_basketball_visionTests.framework */; };
+		40EE8F401DB4241000FA3C09 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */; };
+		40FC8EB51DB41B9400A92091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EB41DB41B9400A92091 /* AppDelegate.swift */; };
+		40FC8EB71DB41B9400A92091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EB61DB41B9400A92091 /* ViewController.swift */; };
+		40FC8EBA1DB41B9400A92091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EB81DB41B9400A92091 /* Main.storyboard */; };
+		40FC8EBC1DB41B9400A92091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EBB1DB41B9400A92091 /* Assets.xcassets */; };
+		40FC8EBF1DB41B9400A92091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EBD1DB41B9400A92091 /* LaunchScreen.storyboard */; };
+		40FC8ECA1DB41B9400A92091 /* basketball_visionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EC91DB41B9400A92091 /* basketball_visionTests.swift */; };
+		40FC8ED51DB41B9400A92091 /* basketball_visionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */; };
+		40FC8EE31DB41C2A00A92091 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40FC8EC61DB41B9400A92091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40FC8EA91DB41B9400A92091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40FC8EB01DB41B9400A92091;
+			remoteInfo = basketball_vision;
+		};
+		40FC8ED11DB41B9400A92091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40FC8EA91DB41B9400A92091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40FC8EB01DB41B9400A92091;
+			remoteInfo = basketball_vision;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		288F858B0B76CEFE563DE624 /* Pods-basketball_visionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests.release.xcconfig"; sourceTree = "<group>"; };
+		334102806362DC1343F55089 /* Pods-basketball_visionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		401537C61DB41D6F0048329B /* basketball_vision-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "basketball_vision-Bridging-Header.h"; sourceTree = "<group>"; };
+		40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		40FC8EB11DB41B9400A92091 /* basketball_vision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basketball_vision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FC8EB41DB41B9400A92091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40FC8EB61DB41B9400A92091 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40FC8EB91DB41B9400A92091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40FC8EBB1DB41B9400A92091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40FC8EBE1DB41B9400A92091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40FC8EC01DB41B9400A92091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40FC8EC51DB41B9400A92091 /* basketball_visionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = basketball_visionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FC8EC91DB41B9400A92091 /* basketball_visionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketball_visionTests.swift; sourceTree = "<group>"; };
+		40FC8ECB1DB41B9400A92091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40FC8ED01DB41B9400A92091 /* basketball_visionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = basketball_visionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketball_visionUITests.swift; sourceTree = "<group>"; };
+		40FC8ED61DB41B9400A92091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		528EECC0D646C66C4E741E64 /* Pods-basketball_visionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		72461171856C11117D715EA5 /* Pods-basketball_visionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8AC242BEEB26467BC2E8C131 /* Pods-basketball_vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_vision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_vision/Pods-basketball_vision.debug.xcconfig"; sourceTree = "<group>"; };
+		9750507EA38B38E75B7965D1 /* Pods_basketball_visionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basketball_visionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		999D6EC5335F077BE0B0FC71 /* Pods_basketball_vision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basketball_vision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7D38F2EF021E2A70629AA1 /* Pods_basketball_visionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basketball_visionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFEF0625F8E0AA429CD2473 /* Pods-basketball_vision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_vision.release.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_vision/Pods-basketball_vision.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40FC8EAE1DB41B9400A92091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C835ED2A3A8C987D811548D /* Pods_basketball_vision.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FC8EC21DB41B9400A92091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA7E6A3070B18673F4A1702 /* Pods_basketball_visionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FC8ECD1DB41B9400A92091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				056CFA71BFD3652B367CD1CC /* Pods_basketball_visionUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40FC8EA81DB41B9400A92091 = {
+			isa = PBXGroup;
+			children = (
+				40FC8EB31DB41B9400A92091 /* basketball_vision */,
+				40FC8EC81DB41B9400A92091 /* basketball_visionTests */,
+				40FC8ED31DB41B9400A92091 /* basketball_visionUITests */,
+				40FC8EB21DB41B9400A92091 /* Products */,
+				EAAFFEAAADB246DD867C5C76 /* Pods */,
+				D0B1A7810B60DE2C257C57EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40FC8EB21DB41B9400A92091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40FC8EB11DB41B9400A92091 /* basketball_vision.app */,
+				40FC8EC51DB41B9400A92091 /* basketball_visionTests.xctest */,
+				40FC8ED01DB41B9400A92091 /* basketball_visionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40FC8EB31DB41B9400A92091 /* basketball_vision */ = {
+			isa = PBXGroup;
+			children = (
+				40FC8EB41DB41B9400A92091 /* AppDelegate.swift */,
+				40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */,
+				40FC8EB61DB41B9400A92091 /* ViewController.swift */,
+				40FC8EB81DB41B9400A92091 /* Main.storyboard */,
+				40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */,
+				40FC8EBB1DB41B9400A92091 /* Assets.xcassets */,
+				40FC8EBD1DB41B9400A92091 /* LaunchScreen.storyboard */,
+				40FC8EC01DB41B9400A92091 /* Info.plist */,
+				401537C61DB41D6F0048329B /* basketball_vision-Bridging-Header.h */,
+			);
+			path = basketball_vision;
+			sourceTree = "<group>";
+		};
+		40FC8EC81DB41B9400A92091 /* basketball_visionTests */ = {
+			isa = PBXGroup;
+			children = (
+				40FC8EC91DB41B9400A92091 /* basketball_visionTests.swift */,
+				40FC8ECB1DB41B9400A92091 /* Info.plist */,
+			);
+			path = basketball_visionTests;
+			sourceTree = "<group>";
+		};
+		40FC8ED31DB41B9400A92091 /* basketball_visionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */,
+				40FC8ED61DB41B9400A92091 /* Info.plist */,
+			);
+			path = basketball_visionUITests;
+			sourceTree = "<group>";
+		};
+		D0B1A7810B60DE2C257C57EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				999D6EC5335F077BE0B0FC71 /* Pods_basketball_vision.framework */,
+				AE7D38F2EF021E2A70629AA1 /* Pods_basketball_visionTests.framework */,
+				9750507EA38B38E75B7965D1 /* Pods_basketball_visionUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAAFFEAAADB246DD867C5C76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AC242BEEB26467BC2E8C131 /* Pods-basketball_vision.debug.xcconfig */,
+				BBFEF0625F8E0AA429CD2473 /* Pods-basketball_vision.release.xcconfig */,
+				528EECC0D646C66C4E741E64 /* Pods-basketball_visionTests.debug.xcconfig */,
+				288F858B0B76CEFE563DE624 /* Pods-basketball_visionTests.release.xcconfig */,
+				72461171856C11117D715EA5 /* Pods-basketball_visionUITests.debug.xcconfig */,
+				334102806362DC1343F55089 /* Pods-basketball_visionUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40FC8EB01DB41B9400A92091 /* basketball_vision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FC8ED91DB41B9400A92091 /* Build configuration list for PBXNativeTarget "basketball_vision" */;
+			buildPhases = (
+				4AB37650E20A4BAB3682FB9D /* [CP] Check Pods Manifest.lock */,
+				40FC8EAD1DB41B9400A92091 /* Sources */,
+				40FC8EAE1DB41B9400A92091 /* Frameworks */,
+				40FC8EAF1DB41B9400A92091 /* Resources */,
+				25CD2270AD73BED85A7C663B /* [CP] Embed Pods Frameworks */,
+				6768AAF300B2D9E638EBAA6C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = basketball_vision;
+			productName = basketball_vision;
+			productReference = 40FC8EB11DB41B9400A92091 /* basketball_vision.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40FC8EC41DB41B9400A92091 /* basketball_visionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FC8EDC1DB41B9400A92091 /* Build configuration list for PBXNativeTarget "basketball_visionTests" */;
+			buildPhases = (
+				3B93D2B239FFE11D376BAE7A /* [CP] Check Pods Manifest.lock */,
+				40FC8EC11DB41B9400A92091 /* Sources */,
+				40FC8EC21DB41B9400A92091 /* Frameworks */,
+				40FC8EC31DB41B9400A92091 /* Resources */,
+				DB992F0764563DBF3A10407E /* [CP] Embed Pods Frameworks */,
+				CEA8C90D75CF5A368B18030B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40FC8EC71DB41B9400A92091 /* PBXTargetDependency */,
+			);
+			name = basketball_visionTests;
+			productName = basketball_visionTests;
+			productReference = 40FC8EC51DB41B9400A92091 /* basketball_visionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40FC8ECF1DB41B9400A92091 /* basketball_visionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FC8EDF1DB41B9400A92091 /* Build configuration list for PBXNativeTarget "basketball_visionUITests" */;
+			buildPhases = (
+				CD0375A288D40B7A2848E826 /* [CP] Check Pods Manifest.lock */,
+				40FC8ECC1DB41B9400A92091 /* Sources */,
+				40FC8ECD1DB41B9400A92091 /* Frameworks */,
+				40FC8ECE1DB41B9400A92091 /* Resources */,
+				C8D4D5F36473B54A6B69D2FA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40FC8ED21DB41B9400A92091 /* PBXTargetDependency */,
+			);
+			name = basketball_visionUITests;
+			productName = basketball_visionUITests;
+			productReference = 40FC8ED01DB41B9400A92091 /* basketball_visionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40FC8EA91DB41B9400A92091 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Kendall Weihe";
+				TargetAttributes = {
+					40FC8EB01DB41B9400A92091 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3A5PC7P5G2;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					40FC8EC41DB41B9400A92091 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3A5PC7P5G2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 40FC8EB01DB41B9400A92091;
+					};
+					40FC8ECF1DB41B9400A92091 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3A5PC7P5G2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 40FC8EB01DB41B9400A92091;
+					};
+				};
+			};
+			buildConfigurationList = 40FC8EAC1DB41B9400A92091 /* Build configuration list for PBXProject "basketball_vision" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40FC8EA81DB41B9400A92091;
+			productRefGroup = 40FC8EB21DB41B9400A92091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40FC8EB01DB41B9400A92091 /* basketball_vision */,
+				40FC8EC41DB41B9400A92091 /* basketball_visionTests */,
+				40FC8ECF1DB41B9400A92091 /* basketball_visionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40FC8EAF1DB41B9400A92091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FC8EBF1DB41B9400A92091 /* LaunchScreen.storyboard in Resources */,
+				40FC8EE31DB41C2A00A92091 /* GoogleService-Info.plist in Resources */,
+				40FC8EBC1DB41B9400A92091 /* Assets.xcassets in Resources */,
+				40FC8EBA1DB41B9400A92091 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FC8EC31DB41B9400A92091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FC8ECE1DB41B9400A92091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25CD2270AD73BED85A7C663B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-basketball_vision/Pods-basketball_vision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B93D2B239FFE11D376BAE7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4AB37650E20A4BAB3682FB9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6768AAF300B2D9E638EBAA6C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-basketball_vision/Pods-basketball_vision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D4D5F36473B54A6B69D2FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD0375A288D40B7A2848E826 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEA8C90D75CF5A368B18030B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB992F0764563DBF3A10407E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40FC8EAD1DB41B9400A92091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40EE8F401DB4241000FA3C09 /* StatisticsViewController.swift in Sources */,
+				40FC8EB71DB41B9400A92091 /* ViewController.swift in Sources */,
+				40FC8EB51DB41B9400A92091 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FC8EC11DB41B9400A92091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FC8ECA1DB41B9400A92091 /* basketball_visionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FC8ECC1DB41B9400A92091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FC8ED51DB41B9400A92091 /* basketball_visionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40FC8EC71DB41B9400A92091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40FC8EB01DB41B9400A92091 /* basketball_vision */;
+			targetProxy = 40FC8EC61DB41B9400A92091 /* PBXContainerItemProxy */;
+		};
+		40FC8ED21DB41B9400A92091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40FC8EB01DB41B9400A92091 /* basketball_vision */;
+			targetProxy = 40FC8ED11DB41B9400A92091 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40FC8EB81DB41B9400A92091 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40FC8EB91DB41B9400A92091 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40FC8EBD1DB41B9400A92091 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40FC8EBE1DB41B9400A92091 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40FC8ED71DB41B9400A92091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40FC8ED81DB41B9400A92091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40FC8EDA1DB41B9400A92091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC242BEEB26467BC2E8C131 /* Pods-basketball_vision.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = basketball_vision/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.basketball-vision.ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "basketball_vision/basketball_vision-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		40FC8EDB1DB41B9400A92091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBFEF0625F8E0AA429CD2473 /* Pods-basketball_vision.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = basketball_vision/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.basketball-vision.ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "basketball_vision/basketball_vision-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		40FC8EDD1DB41B9400A92091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528EECC0D646C66C4E741E64 /* Pods-basketball_visionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				INFOPLIST_FILE = basketball_visionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "khv.basketball-visionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/basketball_vision.app/basketball_vision";
+			};
+			name = Debug;
+		};
+		40FC8EDE1DB41B9400A92091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288F858B0B76CEFE563DE624 /* Pods-basketball_visionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				INFOPLIST_FILE = basketball_visionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "khv.basketball-visionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/basketball_vision.app/basketball_vision";
+			};
+			name = Release;
+		};
+		40FC8EE01DB41B9400A92091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72461171856C11117D715EA5 /* Pods-basketball_visionUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				INFOPLIST_FILE = basketball_visionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "khv.basketball-visionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = basketball_vision;
+			};
+			name = Debug;
+		};
+		40FC8EE11DB41B9400A92091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334102806362DC1343F55089 /* Pods-basketball_visionUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				INFOPLIST_FILE = basketball_visionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "khv.basketball-visionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = basketball_vision;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40FC8EAC1DB41B9400A92091 /* Build configuration list for PBXProject "basketball_vision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FC8ED71DB41B9400A92091 /* Debug */,
+				40FC8ED81DB41B9400A92091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FC8ED91DB41B9400A92091 /* Build configuration list for PBXNativeTarget "basketball_vision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FC8EDA1DB41B9400A92091 /* Debug */,
+				40FC8EDB1DB41B9400A92091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FC8EDC1DB41B9400A92091 /* Build configuration list for PBXNativeTarget "basketball_visionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FC8EDD1DB41B9400A92091 /* Debug */,
+				40FC8EDE1DB41B9400A92091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FC8EDF1DB41B9400A92091 /* Build configuration list for PBXNativeTarget "basketball_visionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FC8EE01DB41B9400A92091 /* Debug */,
+				40FC8EE11DB41B9400A92091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40FC8EA91DB41B9400A92091 /* Project object */;
+}

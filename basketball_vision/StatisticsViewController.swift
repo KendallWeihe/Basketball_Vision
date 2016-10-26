@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import Firebase
+//import FirebaseDatabaseUI
 
 class StatisticsViewController: UIViewController {
 
+    // [START define_database_reference]
+    var ref: FIRDatabaseReference!
+    // [END define_database_reference]
+    
+    var email = String()
+    var fullName = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ref = FIRDatabase.database().reference()
+
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+        email = appDelegate.email
+        fullName = appDelegate.fullName
+        
+        let users = self.ref.child("users")
+        let temp = self.ref.child("basketball-vision-8db77")
+        self.ref.child("users").setValue(["user_email": email])
+        self.ref.child("users").setValue(["full_name": fullName])
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,12 +10,21 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
+
+    var userID = String()
+    var idToken = String()
+    var fullName = String()
+    var givenName = String()
+    var familyName = String()
+    var email = String()
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var statisticsButton: UIButton!
+    @IBOutlet weak var gamesButton: UIButton!
 
+    
     @IBAction func tappedSignIn(sender: UITapGestureRecognizer) {
         GIDSignIn.sharedInstance().signIn()
     }
@@ -34,11 +43,20 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             signInButton.hidden = true
             statisticsButton.hidden = false
             signOutButton.hidden = false
+            gamesButton.hidden = false
             print("here")
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            userID = appDelegate.userId
+            idToken = appDelegate.idToken
+            fullName = appDelegate.fullName
+            givenName = appDelegate.givenName
+            familyName = appDelegate.familyName
+            email = appDelegate.email
         } else {
             signInButton.hidden = false
             statisticsButton.hidden = true
             signOutButton.hidden = true
+            gamesButton.hidden = true
             statusText.text = "Google Sign in\niOS Demo"
         }
     }
@@ -47,6 +65,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     // [START viewdidload]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         GIDSignIn.sharedInstance().uiDelegate = self
         

@@ -8,6 +8,8 @@ target 'basketball_vision' do
   # Pods for basketball_vision
   pod 'Google/SignIn'
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
   target 'basketball_visionTests' do
     inherit! :search_paths

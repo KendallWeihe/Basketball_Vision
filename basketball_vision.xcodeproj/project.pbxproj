@@ -11,6 +11,7 @@
 		3C835ED2A3A8C987D811548D /* Pods_basketball_vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999D6EC5335F077BE0B0FC71 /* Pods_basketball_vision.framework */; };
 		3EA7E6A3070B18673F4A1702 /* Pods_basketball_visionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7D38F2EF021E2A70629AA1 /* Pods_basketball_visionTests.framework */; };
 		40EE8F401DB4241000FA3C09 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */; };
+		40EE8F421DB4355C00FA3C09 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */; };
 		40FC8EB51DB41B9400A92091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EB41DB41B9400A92091 /* AppDelegate.swift */; };
 		40FC8EB71DB41B9400A92091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EB61DB41B9400A92091 /* ViewController.swift */; };
 		40FC8EBA1DB41B9400A92091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EB81DB41B9400A92091 /* Main.storyboard */; };
@@ -41,8 +42,10 @@
 /* Begin PBXFileReference section */
 		288F858B0B76CEFE563DE624 /* Pods-basketball_visionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests.release.xcconfig"; sourceTree = "<group>"; };
 		334102806362DC1343F55089 /* Pods-basketball_visionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		400AB5BD1DB9624E003EF902 /* basketball_vision.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = basketball_vision.entitlements; sourceTree = "<group>"; };
 		401537C61DB41D6F0048329B /* basketball_vision-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "basketball_vision-Bridging-Header.h"; sourceTree = "<group>"; };
 		40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		40FC8EB11DB41B9400A92091 /* basketball_vision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basketball_vision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FC8EB41DB41B9400A92091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40FC8EB61DB41B9400A92091 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,10 +122,12 @@
 		40FC8EB31DB41B9400A92091 /* basketball_vision */ = {
 			isa = PBXGroup;
 			children = (
+				400AB5BD1DB9624E003EF902 /* basketball_vision.entitlements */,
 				40FC8EB41DB41B9400A92091 /* AppDelegate.swift */,
 				40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */,
 				40FC8EB61DB41B9400A92091 /* ViewController.swift */,
 				40FC8EB81DB41B9400A92091 /* Main.storyboard */,
+				40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */,
 				40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */,
 				40FC8EBB1DB41B9400A92091 /* Assets.xcassets */,
 				40FC8EBD1DB41B9400A92091 /* LaunchScreen.storyboard */,
@@ -252,6 +257,11 @@
 						DevelopmentTeam = 3A5PC7P5G2;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					40FC8EC41DB41B9400A92091 = {
 						CreatedOnToolsVersion = 8.0;
@@ -443,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EE8F421DB4355C00FA3C09 /* GamesViewController.swift in Sources */,
 				40EE8F401DB4241000FA3C09 /* StatisticsViewController.swift in Sources */,
 				40FC8EB71DB41B9400A92091 /* ViewController.swift in Sources */,
 				40FC8EB51DB41B9400A92091 /* AppDelegate.swift in Sources */,
@@ -599,6 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = basketball_vision/basketball_vision.entitlements;
 				DEVELOPMENT_TEAM = 3A5PC7P5G2;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = basketball_vision/Info.plist;
@@ -617,6 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = basketball_vision/basketball_vision.entitlements;
 				DEVELOPMENT_TEAM = 3A5PC7P5G2;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = basketball_vision/Info.plist;

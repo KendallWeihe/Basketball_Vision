@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
 
     var window: UIWindow?
 
@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var givenName = String()
     var familyName = String()
     var email = String()
+
     
     // [START didfinishlaunching]
     func application(application: UIApplication,
@@ -30,7 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
         
         GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         FIRApp.configure()
+        
+        if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
+            GIDSignIn.sharedInstance().signInSilently()
+        }
+        
         return true
     }
     // [END didfinishlaunching]
@@ -59,11 +67,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             // Perform any operations on signed in user here.
             userId = user.userID                  // For client-side use only!
             idToken = user.authentication.idToken // Safe to send to the server
-            fullName = user.profile.name
+            //fullName = user.profile.name
             givenName = user.profile.givenName
             familyName = user.profile.familyName
+            //email = user.profile.email
+            fullName = user.profile.name 
             email = user.profile.email
-
+            
             // [START_EXCLUDE]
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification",
@@ -71,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 userInfo: ["statusText": "Signed in user:\n\(fullName)"])
             // [END_EXCLUDE]
         } else {
-            print("\(error.localizedDescription)")
+            print(" My eror \(error.localizedDescription)")
             // [START_EXCLUDE silent]
             NSNotificationCenter.defaultCenter().postNotificationName(
                 "ToggleAuthUINotification", object: nil, userInfo: nil)

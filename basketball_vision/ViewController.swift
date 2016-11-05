@@ -5,25 +5,25 @@
 //  Created by Kendall Weihe on 10/16/16.
 //  Copyright © 2016 Kendall Weihe. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
-
+    
     var userID = String()
     var idToken = String()
     var fullName = String()
     var givenName = String()
     var familyName = String()
     var email = String()
+
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var statisticsButton: UIButton!
     @IBOutlet weak var gamesButton: UIButton!
-
+    
     
     @IBAction func tappedSignIn(sender: UITapGestureRecognizer) {
         GIDSignIn.sharedInstance().signIn()
@@ -66,7 +66,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         
         GIDSignIn.sharedInstance().uiDelegate = self
         
@@ -86,7 +86,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         // [END_EXCLUDE]
     }
     // [END viewdidload]
-
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
@@ -112,7 +111,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-

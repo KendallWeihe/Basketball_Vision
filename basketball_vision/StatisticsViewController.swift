@@ -22,17 +22,26 @@ class StatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref = FIRDatabase.database().reference()
-
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-
-        email = appDelegate.email
-        fullName = appDelegate.fullName
+        if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
+            GIDSignIn.sharedInstance().signInSilently()
+        }
         
+        
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let email = appDelegate.email
+        let fullName = appDelegate.fullName
+        
+        let newUser = ["name" : fullName]
         let users = self.ref.child("users")
-        let temp = self.ref.child("basketball-vision-8db77")
-        self.ref.child("users").setValue(["user_email": email])
-        self.ref.child("users").setValue(["full_name": fullName])
+        let currentUser = users.childByAppendingPath("\(email)")
+        currentUser.setValue(newUser)
+        
+//        let ref = FIRDatabase.database().reference()
+//        let users = ref.child("users")
+//        //let currentUser = users.childByAppendingPath(FIRAuth.auth()!.currentUser!.email!)
+//        let currentUser = users.childByAppendingPath("\(email)")
+//        print(currentUser)
         
     }
 

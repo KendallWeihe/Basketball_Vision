@@ -19,7 +19,7 @@
 		40FC8EBF1DB41B9400A92091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EBD1DB41B9400A92091 /* LaunchScreen.storyboard */; };
 		40FC8ECA1DB41B9400A92091 /* basketball_visionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EC91DB41B9400A92091 /* basketball_visionTests.swift */; };
 		40FC8ED51DB41B9400A92091 /* basketball_visionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */; };
-		40FC8EE31DB41C2A00A92091 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */; };
+		5FC5D5781DCE6B1400F43E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC5D5771DCE6B1400F43E7A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		40FC8ED01DB41B9400A92091 /* basketball_visionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = basketball_visionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketball_visionUITests.swift; sourceTree = "<group>"; };
 		40FC8ED61DB41B9400A92091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		528EECC0D646C66C4E741E64 /* Pods-basketball_visionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FC5D5771DCE6B1400F43E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72461171856C11117D715EA5 /* Pods-basketball_visionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC242BEEB26467BC2E8C131 /* Pods-basketball_vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_vision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_vision/Pods-basketball_vision.debug.xcconfig"; sourceTree = "<group>"; };
 		9750507EA38B38E75B7965D1 /* Pods_basketball_visionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_basketball_visionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +124,7 @@
 			children = (
 				400AB5BD1DB9624E003EF902 /* basketball_vision.entitlements */,
 				40FC8EB41DB41B9400A92091 /* AppDelegate.swift */,
-				40FC8EE21DB41C2A00A92091 /* GoogleService-Info.plist */,
+				5FC5D5771DCE6B1400F43E7A /* GoogleService-Info.plist */,
 				40FC8EB61DB41B9400A92091 /* ViewController.swift */,
 				40FC8EB81DB41B9400A92091 /* Main.storyboard */,
 				40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */,
@@ -254,7 +254,7 @@
 				TargetAttributes = {
 					40FC8EB01DB41B9400A92091 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3A5PC7P5G2;
+						DevelopmentTeam = 964QFWYN42;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -303,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FC8EBF1DB41B9400A92091 /* LaunchScreen.storyboard in Resources */,
-				40FC8EE31DB41C2A00A92091 /* GoogleService-Info.plist in Resources */,
+				5FC5D5781DCE6B1400F43E7A /* GoogleService-Info.plist in Resources */,
 				40FC8EBC1DB41B9400A92091 /* Assets.xcassets in Resources */,
 				40FC8EBA1DB41B9400A92091 /* Main.storyboard in Resources */,
 			);
@@ -611,7 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = basketball_vision/basketball_vision.entitlements;
-				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				DEVELOPMENT_TEAM = 964QFWYN42;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = basketball_vision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -630,7 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = basketball_vision/basketball_vision.entitlements;
-				DEVELOPMENT_TEAM = 3A5PC7P5G2;
+				DEVELOPMENT_TEAM = 964QFWYN42;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = basketball_vision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

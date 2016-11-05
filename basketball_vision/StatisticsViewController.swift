@@ -26,16 +26,27 @@ class StatisticsViewController: UIViewController {
             GIDSignIn.sharedInstance().signInSilently()
         }
         
-        
+        ref = FIRDatabase.database().reference()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let email = appDelegate.email
-        let fullName = appDelegate.fullName
+        let email = appDelegate.email // email from delegate
+        let firebaseEmail = email.stringByReplacingOccurrencesOfString(".", withString: "&") // makes the email valid for Firebase
         
-        let newUser = ["name" : fullName]
+        let fullName = appDelegate.fullName
+        let userID = appDelegate.userId
+        
+        let newUser = ["name" : fullName,
+                       "userID" : userID]
+        
         let users = self.ref.child("users")
-        let currentUser = users.childByAppendingPath("\(email)")
+        let currentUser = users.child(firebaseEmail)
         currentUser.setValue(newUser)
+        print(currentUser)
+        
+        let unFirebaseEmailArray = firebaseEmail.componentsSeparatedByString("&")
+        let unFirebaseEmail = unFirebaseEmailArray.joinWithSeparator(".")
+        print(unFirebaseEmail) // Back to original email
+        
         
 //        let ref = FIRDatabase.database().reference()
 //        let users = ref.child("users")

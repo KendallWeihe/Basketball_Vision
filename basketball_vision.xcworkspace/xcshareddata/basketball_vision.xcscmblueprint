@@ -4,13 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "D0E1C954EA6219906B4914CC6988100999488DF8" : 9223372036854775807,
+    "F10911D2FB29273C8E0EFCC42940FA458838297F" : 9223372036854775807,
     "977BE9B4B862CA8E6ECF64135FA85C23FE218BBD" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A9112E91-E64A-4D48-9554-6F6C1585333F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "D0E1C954EA6219906B4914CC6988100999488DF8" : "",
-    "977BE9B4B862CA8E6ECF64135FA85C23FE218BBD" : "basketball_vision\/"
+    "F10911D2FB29273C8E0EFCC42940FA458838297F" : "",
+    "977BE9B4B862CA8E6ECF64135FA85C23FE218BBD" : "Basketball_Vision\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "basketball_vision",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -24,7 +24,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:KendallWeihe\/CS499.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D0E1C954EA6219906B4914CC6988100999488DF8"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F10911D2FB29273C8E0EFCC42940FA458838297F"
     }
   ]
 }

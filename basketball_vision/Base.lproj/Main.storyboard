@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -249,6 +249,9 @@
                                 <frame key="frameInset" minX="127" minY="135" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Number of points"/>
+                                <connections>
+                                    <action selector="get_num_points:" destination="fns-fZ-DhW" eventType="touchUpInside" id="sbl-h1-cRP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entire History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TI-oC-o2N">
                                 <frame key="frameInset" minX="135" minY="97" width="104" height="21"/>
@@ -261,11 +264,49 @@
                                 <frame key="frameInset" minX="115" minY="173" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Shooting percentage"/>
+                                <connections>
+                                    <action selector="get_shooting_percentage:" destination="fns-fZ-DhW" eventType="touchUpInside" id="gVe-Bc-35P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYt-IM-1NF">
                                 <frame key="frameInset" minX="126" minY="211" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Number of threes"/>
+                                <connections>
+                                    <action selector="get_num_threes:" destination="fns-fZ-DhW" eventType="touchUpInside" id="V7f-bE-JYO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLT-Wq-GII">
+                                <frame key="frameInset" minX="132" minY="249" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Number of twos"/>
+                                <connections>
+                                    <action selector="get_num_twos:" destination="fns-fZ-DhW" eventType="touchUpInside" id="xED-QJ-4Wm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-xt-OzR">
+                                <frame key="frameInset" minX="89" minY="405" width="194" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Simulate made three pointer"/>
+                                <connections>
+                                    <action selector="simulate_made_three:" destination="fns-fZ-DhW" eventType="touchUpInside" id="4ZW-QL-Za1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCU-4g-3Ib">
+                                <frame key="frameInset" minX="95" minY="443" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Simulate made two pointer"/>
+                                <connections>
+                                    <action selector="simulate_made_two:" destination="fns-fZ-DhW" eventType="touchUpInside" id="pBi-ba-v68"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ6-hc-tSI">
+                                <frame key="frameInset" minX="113" minY="481" width="146" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Simulate missed shot"/>
+                                <connections>
+                                    <action selector="simulate_missed_shot:" destination="fns-fZ-DhW" eventType="touchUpInside" id="dvG-Sy-Np8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,7 +318,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3JA-yO-cp3"/>
         <segue reference="gvB-sq-odr"/>
+        <segue reference="0Md-qa-Oe5"/>
     </inferredMetricsTieBreakers>
 </document>

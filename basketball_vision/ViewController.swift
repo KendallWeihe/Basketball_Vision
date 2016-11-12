@@ -27,6 +27,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func tappedSignIn(sender: UITapGestureRecognizer) {
         GIDSignIn.sharedInstance().signIn()
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        email = appDelegate.email
+        get_user_info(email);
     }
     
     @IBAction func tappedSignOut(sender: UITapGestureRecognizer) {
@@ -44,7 +47,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             statisticsButton.hidden = false
             signOutButton.hidden = false
             gamesButton.hidden = false
-            print("here")
+            print("logged in")
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             userID = appDelegate.userId
             idToken = appDelegate.idToken
@@ -61,6 +64,69 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     // [END toggle_auth]
+    
+    // [START define_database_reference]
+    var ref: FIRDatabaseReference!
+    // [END define_database_reference]
+    func get_user_info(email: String){
+        var firebaseEmail = email.stringByReplacingOccurrencesOfString(".", withString: "&") // makes the email valid for Firebase
+        
+        if (firebaseEmail == ""){
+            firebaseEmail = "kendallweihe@gmail&com"
+        }
+        ref = FIRDatabase.database().reference()
+        let users = self.ref.child("users")
+        users.child(firebaseEmail).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            let value = snapShot.value as! NSDictionary
+            if (value["stats"] == nil){
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let fullName = appDelegate.fullName
+                let userID = appDelegate.userId
+                
+                let newUser = ["name" : fullName,
+                    "stats": [
+                        "userID" : userID,
+                        "num_points": 0,
+                        "total_num_shots": 0.0,
+                        "total_num_made_shots": 0.0,
+                        "shooting_percentage": 1.0,
+                        "num_threes": 0,
+                        "num_twos": 0
+                    ],
+                    "games" : [
+                        "horse_score" : 0
+                    ],
+                    "session" : [
+                        "num_points": 0,
+                        "total_num_shots": 0.0,
+                        "total_num_made_shots": 0.0,
+                        "shooting_percentage": 1.0,
+                        "num_threes": 0,
+                        "num_twos": 0
+                    ]
+                ]
+                
+                let currentUser = users.child(firebaseEmail)
+                currentUser.setValue(newUser)
+                print(currentUser)
+                
+                let unFirebaseEmailArray = firebaseEmail.componentsSeparatedByString("&")
+                let unFirebaseEmail = unFirebaseEmailArray.joinWithSeparator(".")
+                print(unFirebaseEmail) // Back to original email
+            }
+        })
+        
+        let new_session = [
+            "num_points": 0,
+            "total_num_shots": 0.0,
+            "total_num_made_shots": 0.0,
+            "shooting_percentage": 1.0,
+            "num_threes": 0,
+            "num_twos": 0
+        ]
+        users.child(firebaseEmail).child("session").setValue(new_session)
+        
+    }
     
     // [START viewdidload]
     override func viewDidLoad() {

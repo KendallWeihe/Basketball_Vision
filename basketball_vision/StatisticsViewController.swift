@@ -43,29 +43,59 @@ class StatisticsViewController: UIViewController {
     @IBAction func simulate_made_three(sender: AnyObject) {
         print("simulate_made_three")
         let users = self.ref.child("users")
-        //        let num_points = users.child(global_email).child("num_points")
-        //        print(num_points)
-        let user = users.child(global_email)
-        print(user)
+//        let user = users.child(global_email)
+//        print(user)
         
         users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
-            
-            print(snapShot)
+            //print(snapShot)
             let value = snapShot.value as! NSDictionary
-            let username = value["name"] as! String ?? ""
             let num_points = value["num_points"] as! NSInteger
+            let num_threes = value["num_threes"] as! NSInteger
+            let total_num_shots = value["total_num_shots"] as! Double
+            let total_num_made_shots = value["total_num_made_shots"] as! Double
+            users.child(self.global_email).child("shooting_percentage").setValue((total_num_made_shots+1)/(total_num_shots+1))
             users.child(self.global_email).child("num_points").setValue(num_points+3)
-            
-            
+            users.child(self.global_email).child("num_threes").setValue(num_threes+1)
+            users.child(self.global_email).child("total_num_shots").setValue(total_num_shots+1)
+            users.child(self.global_email).child("total_num_made_shots").setValue(total_num_made_shots+1)
         })
     }
     
     @IBAction func simulate_made_two(sender: AnyObject) {
         print("simulate_made_two")
+        let users = self.ref.child("users")
+        //        let user = users.child(global_email)
+        //        print(user)
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let num_points = value["num_points"] as! NSInteger
+            let num_twos = value["num_twos"] as! NSInteger
+            let total_num_shots = value["total_num_shots"] as! Double
+            let total_num_made_shots = value["total_num_made_shots"] as! Double
+            users.child(self.global_email).child("shooting_percentage").setValue((total_num_made_shots+1)/(total_num_shots+1))
+            users.child(self.global_email).child("num_points").setValue(num_points+2)
+            users.child(self.global_email).child("num_twos").setValue(num_twos+1)
+            users.child(self.global_email).child("total_num_shots").setValue(total_num_shots+1)
+            users.child(self.global_email).child("total_num_made_shots").setValue(total_num_made_shots+1)
+        })
     }
     
     @IBAction func simulate_missed_shot(sender: AnyObject) {
         print("simulate_missed_shot")
+        let users = self.ref.child("users")
+        //        let user = users.child(global_email)
+        //        print(user)
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let total_num_shots = value["total_num_shots"] as! Double
+            let total_num_made_shots = value["total_num_made_shots"] as! Double
+            users.child(self.global_email).child("shooting_percentage").setValue(total_num_made_shots/(total_num_shots+1))
+            users.child(self.global_email).child("total_num_shots").setValue(total_num_shots+1)
+        })
     }
     
     
@@ -98,6 +128,8 @@ class StatisticsViewController: UIViewController {
         let newUser = ["name" : fullName,
                        "userID" : userID,
                        "num_points": 0,
+                       "total_num_shots": 0,
+                       "total_num_made_shots": 0,
                        "shooting_percentage": 100,
                        "num_threes": 0,
                        "num_twos": 0]

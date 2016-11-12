@@ -15,8 +15,6 @@ class StatisticsViewController: UIViewController {
     @IBAction func get_num_points(sender: AnyObject) {
         print("get_num_points")
         let users = self.ref.child("users")
-//        let user = users.child(global_email)
-//        print(user)
         
         users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
             //print(snapShot)
@@ -30,14 +28,44 @@ class StatisticsViewController: UIViewController {
     
     @IBAction func get_shooting_percentage(sender: AnyObject) {
         print("get_shooting_percetange")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let shooting_percentage = value["shooting_percentage"] as! Double
+            print("SHOOTING PERCENTAGE = ")
+            print(shooting_percentage)
+            
+        })
     }
     
     @IBAction func get_num_threes(sender: AnyObject) {
         print("get_num_threes")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let num_threes = value["num_threes"] as! NSInteger
+            print("NUM THREES = ")
+            print(num_threes)
+            
+        })
     }
     
     @IBAction func get_num_twos(sender: AnyObject) {
         print("get_num_twos")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let num_twos = value["num_twos"] as! NSInteger
+            print("NUM TWOS = ")
+            print(num_twos)
+            
+        })
     }
     
     @IBAction func simulate_made_three(sender: AnyObject) {
@@ -118,33 +146,41 @@ class StatisticsViewController: UIViewController {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let email = appDelegate.email // email from delegate
-        let firebaseEmail = email.stringByReplacingOccurrencesOfString(".", withString: "&") // makes the email valid for Firebase
-        //global_email = firebaseEmail
-        global_email = "kendallweihe@gmail&com"
+        var firebaseEmail = email.stringByReplacingOccurrencesOfString(".", withString: "&") // makes the email valid for Firebase
         
-        let fullName = appDelegate.fullName
-        let userID = appDelegate.userId
-        
-        let newUser = ["name" : fullName,
-                       "userID" : userID,
-                       "num_points": 0,
-                       "total_num_shots": 0,
-                       "total_num_made_shots": 0,
-                       "shooting_percentage": 100,
-                       "num_threes": 0,
-                       "num_twos": 0]
+        if (firebaseEmail == ""){
+            firebaseEmail = "kendallweihe@gmail&com"
+        }
+        global_email = firebaseEmail
         
         let users = self.ref.child("users")
-        if (firebaseEmail != ""){
-            let currentUser = users.child(firebaseEmail)
-            currentUser.setValue(newUser)
-            print(currentUser)
-            
-            let unFirebaseEmailArray = firebaseEmail.componentsSeparatedByString("&")
-            let unFirebaseEmail = unFirebaseEmailArray.joinWithSeparator(".")
-            print(unFirebaseEmail) // Back to original email
-        }
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            if (snapShot.exists() == false){
+                let fullName = appDelegate.fullName
+                let userID = appDelegate.userId
+                
+                let newUser = ["name" : fullName,
+                    "userID" : userID,
+                    "num_points": 0,
+                    "total_num_shots": 0.0,
+                    "total_num_made_shots": 0.0,
+                    "shooting_percentage": 1.0,
+                    "num_threes": 0,
+                    "num_twos": 0]
+                
+                let currentUser = users.child(firebaseEmail)
+                currentUser.setValue(newUser)
+                print(currentUser)
+                
+                let unFirebaseEmailArray = firebaseEmail.componentsSeparatedByString("&")
+                let unFirebaseEmail = unFirebaseEmailArray.joinWithSeparator(".")
+                print(unFirebaseEmail) // Back to original email
+            }
+        })
+ 
+        
 
+    
         
     
         

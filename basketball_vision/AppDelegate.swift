@@ -10,12 +10,15 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
+
+// inherit Google sign in delegates -- for authentication
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
 
     var window: UIWindow?
 
-    var userId = String()                // For client-side use only!
-    var idToken = String() // Safe to send to the server
+    // global variables to be user throughout the application -- user information
+    var userId = String()
+    var idToken = String()
     var fullName = String()
     var givenName = String()
     var familyName = String()
@@ -30,11 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, GIDSig
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
         
+        // configure Firebase application
+        FIRApp.configure()
+        
+        // configure Google sign in authentication
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
-        FIRApp.configure()
-        
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()){
             GIDSignIn.sharedInstance().signInSilently()
         }
@@ -53,25 +58,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, GIDSig
     }
     // [END openurl]
     
+    // [START openurl for iOS 9.*]
     @available(iOS 9.0, *)
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
         return GIDSignIn.sharedInstance().handleURL(url,
                                                     sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as! String?,
                                                     annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
     }
-    
+    // [END openurl for iOS 9.*]
+
     // [START signin_handler]
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
-        if (error == nil) {
+        if (error == nil) { // case where login was successful
             // Perform any operations on signed in user here.
-            userId = user.userID                  // For client-side use only!
-            idToken = user.authentication.idToken // Safe to send to the server
-            //fullName = user.profile.name
+            // set global variables
+            userId = user.userID
+            idToken = user.authentication.idToken
             givenName = user.profile.givenName
             familyName = user.profile.familyName
-            //email = user.profile.email
-            fullName = user.profile.name 
+            fullName = user.profile.name
             email = user.profile.email
             
             // [START_EXCLUDE]
@@ -80,7 +86,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, GIDSig
                 object: nil,
                 userInfo: ["statusText": "Signed in user:\n\(fullName)"])
             // [END_EXCLUDE]
-        } else {
+        }
+        else { // case where login failed1
             print(" My eror \(error.localizedDescription)")
             // [START_EXCLUDE silent]
             NSNotificationCenter.defaultCenter().postNotificationName(
@@ -102,6 +109,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, GIDSig
         // [END_EXCLUDE]
     }
     // [END disconnect_handler]
+    
+    
+    // below are standard functions typically used in iOS applications -- made ready for future developments
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

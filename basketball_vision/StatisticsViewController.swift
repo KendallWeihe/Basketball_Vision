@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import AVFoundation
+
 //import FirebaseDatabaseUI
 
 class StatisticsViewController: UIViewController {
@@ -23,6 +25,11 @@ class StatisticsViewController: UIViewController {
             print("NUM POINTS = ")
             print(num_points)
             
+            let utterance = AVSpeechUtterance(string: "You have made a total of " + String(num_points) + " points")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
         })
     }
     
@@ -37,6 +44,11 @@ class StatisticsViewController: UIViewController {
             print("SHOOTING PERCENTAGE = ")
             print(shooting_percentage)
             
+            let utterance = AVSpeechUtterance(string: "You're total shooting percentage is " + String(Int(shooting_percentage*100)) + " percent")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
         })
     }
     
@@ -51,6 +63,11 @@ class StatisticsViewController: UIViewController {
             print("NUM THREES = ")
             print(num_threes)
             
+            let utterance = AVSpeechUtterance(string: "You have made " + String(num_threes) + " three pointers total")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
         })
     }
     
@@ -65,8 +82,91 @@ class StatisticsViewController: UIViewController {
             print("NUM TWOS = ")
             print(num_twos)
             
+            let utterance = AVSpeechUtterance(string: "You have made " + String(num_twos) + " two pointers total")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
         })
     }
+    
+    @IBAction func get_num_session_points(sender: AnyObject) {
+        print("get_num_session_points")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let num_points = value["session"]!["num_points"] as! NSInteger
+            print("NUM POINTS = ")
+            print(num_points)
+            
+            let utterance = AVSpeechUtterance(string: "You have made " + String(num_points) + " points during this session")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
+        })
+    }
+    
+    @IBAction func get_session_shooting_percentage(sender: AnyObject) {
+        print("get_session_shooting_percetange")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let shooting_percentage = value["session"]!["shooting_percentage"] as! Double
+            print("SHOOTING PERCENTAGE = ")
+            print(shooting_percentage)
+            
+            let utterance = AVSpeechUtterance(string: "You're shooting percentage for this game session is " + String(Int(shooting_percentage*100)) + " percent")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
+        })
+    }
+    
+    @IBAction func get_session_num_threes(sender: AnyObject) {
+        print("get_session_num_threes")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let num_threes = value["session"]!["num_threes"] as! NSInteger
+            print("NUM THREES = ")
+            print(num_threes)
+            
+            let utterance = AVSpeechUtterance(string: "You have made " + String(num_threes) + " three pointers during this game session")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
+        })
+    }
+    
+    @IBAction func get_session_num_twos(sender: AnyObject) {
+        print("get_session_num_twos")
+        let users = self.ref.child("users")
+        
+        users.child(global_email).observeSingleEventOfType(.Value, withBlock : {(snapShot) in
+            //print(snapShot)
+            let value = snapShot.value as! NSDictionary
+            let num_twos = value["session"]!["num_twos"] as! NSInteger
+            print("NUM TWOS = ")
+            print(num_twos)
+            
+            let utterance = AVSpeechUtterance(string: "You have made " + String(num_twos) + " two pointers during this game session")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speakUtterance(utterance)
+        })
+    }
+    
+    
     
     @IBAction func simulate_made_three(sender: AnyObject) {
         print("simulate_made_three")
@@ -163,6 +263,7 @@ class StatisticsViewController: UIViewController {
     var global_email = String()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         if (GIDSignIn.sharedInstance().hasAuthInKeychain()){

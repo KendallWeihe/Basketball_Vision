@@ -54,15 +54,6 @@
                                     <segue destination="fns-fZ-DhW" kind="show" id="H67-L7-FOa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-eV-oq6">
-                                <frame key="frameInset" minX="135" minY="378" width="109" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <state key="normal" title="Games"/>
-                                <connections>
-                                    <segue destination="mNa-Mp-utq" kind="show" id="gvB-sq-odr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2t6-nZ-HFT">
                                 <frame key="frameInset" minX="131" minY="445" width="118" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -80,6 +71,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cQ3-q5-J12">
+                                <frame key="frameInset" minX="72" minY="121" width="248" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-eV-oq6">
+                                <frame key="frameInset" minX="144" minY="403" width="86" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Games"/>
+                                <connections>
+                                    <segue destination="mNa-Mp-utq" kind="show" id="gvB-sq-odr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -482,6 +486,9 @@
             <point key="canvasLocation" x="860" y="-268"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="601" height="602"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Z4w-Fw-m8c"/>
         <segue reference="gvB-sq-odr"/>

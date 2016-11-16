@@ -169,7 +169,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                                                          name: "ToggleAuthUINotification",
                                                          object: nil)
         
-        statusText.text = "Initialized Swift app..."
+        statusText.text = ""
         toggleAuthUI()
         print("viewDidLoad()")
         // [END_EXCLUDE]

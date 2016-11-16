@@ -10,6 +10,7 @@
 		056CFA71BFD3652B367CD1CC /* Pods_basketball_visionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9750507EA38B38E75B7965D1 /* Pods_basketball_visionUITests.framework */; };
 		3C835ED2A3A8C987D811548D /* Pods_basketball_vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999D6EC5335F077BE0B0FC71 /* Pods_basketball_vision.framework */; };
 		3EA7E6A3070B18673F4A1702 /* Pods_basketball_visionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7D38F2EF021E2A70629AA1 /* Pods_basketball_visionTests.framework */; };
+		4065CC0F1DDCF699000E68BE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4065CC0E1DDCF698000E68BE /* logo.png */; };
 		40E2149C1DD8B2CC00AB6926 /* HorseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2149B1DD8B2CC00AB6926 /* HorseViewController.swift */; };
 		40EE8F401DB4241000FA3C09 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */; };
 		40EE8F421DB4355C00FA3C09 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */; };
@@ -45,6 +46,7 @@
 		334102806362DC1343F55089 /* Pods-basketball_visionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		400AB5BD1DB9624E003EF902 /* basketball_vision.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = basketball_vision.entitlements; sourceTree = "<group>"; };
 		401537C61DB41D6F0048329B /* basketball_vision-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "basketball_vision-Bridging-Header.h"; sourceTree = "<group>"; };
+		4065CC0E1DDCF698000E68BE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		40E2149B1DD8B2CC00AB6926 /* HorseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorseViewController.swift; sourceTree = "<group>"; };
 		40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				5FC5D5771DCE6B1400F43E7A /* GoogleService-Info.plist */,
 				40FC8EB61DB41B9400A92091 /* ViewController.swift */,
 				40FC8EB81DB41B9400A92091 /* Main.storyboard */,
+				4065CC0E1DDCF698000E68BE /* logo.png */,
 				40E2149B1DD8B2CC00AB6926 /* HorseViewController.swift */,
 				40EE8F411DB4355C00FA3C09 /* GamesViewController.swift */,
 				40EE8F3F1DB4241000FA3C09 /* StatisticsViewController.swift */,
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FC8EBF1DB41B9400A92091 /* LaunchScreen.storyboard in Resources */,
+				4065CC0F1DDCF699000E68BE /* logo.png in Resources */,
 				5FC5D5781DCE6B1400F43E7A /* GoogleService-Info.plist in Resources */,
 				40FC8EBC1DB41B9400A92091 /* Assets.xcassets in Resources */,
 				40FC8EBA1DB41B9400A92091 /* Main.storyboard in Resources */,

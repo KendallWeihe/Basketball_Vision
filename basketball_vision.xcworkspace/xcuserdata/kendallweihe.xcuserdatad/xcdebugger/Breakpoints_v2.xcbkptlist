@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "basketball_vision/ViewController.swift"
-            timestampString = "500750381.842033"
+            timestampString = "501019962.058847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "get_user_info(email:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "get_user_info(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "basketball_vision/ViewController.swift"
-            timestampString = "500750381.842033"
+            timestampString = "501019962.058847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "get_user_info(email:)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "get_user_info(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

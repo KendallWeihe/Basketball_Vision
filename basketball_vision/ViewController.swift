@@ -24,6 +24,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var statusText: UILabel!
     @IBOutlet weak var statisticsButton: UIButton!
     @IBOutlet weak var gamesButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     // action to handle when the user tapped Sign In
     @IBAction func tappedSignIn(sender: UITapGestureRecognizer) {
@@ -54,6 +55,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             statisticsButton.hidden = false
             signOutButton.hidden = false
             gamesButton.hidden = false
+            settingsButton.hidden = false
             print("logged in")
             
             // assign global variables
@@ -71,6 +73,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             statisticsButton.hidden = true
             signOutButton.hidden = true
             gamesButton.hidden = true
+            settingsButton.hidden = true
             statusText.text = "Google Sign in\niOS Demo"
         }
     }

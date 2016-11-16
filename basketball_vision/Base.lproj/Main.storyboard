@@ -19,60 +19,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgi-I1-NXs">
-                                <frame key="frameInset" minX="157" minY="617" width="60" height="30"/>
+                                <frame key="frameInset" minX="131" minY="590" width="113" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Sign Out"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bln-ry-grA" appends="YES" id="xC9-LS-mMn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="............................" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7m-wd-V9P">
-                                <frame key="frameInset" minX="122" minY="58" width="131" height="21"/>
+                                <frame key="frameInset" minX="131" minY="570" width="131" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzu-Uk-gpP">
-                                <frame key="frameInset" minX="164" minY="28" width="47" height="30"/>
+                                <frame key="frameInset" minX="146" minY="513" width="83" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="YY2-bJ-Iod" appends="YES" id="zWN-SS-whJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-J0-ua6">
-                                <frame key="frameInset" minX="155" minY="221" width="64" height="30"/>
+                                <frame key="frameInset" minX="123" minY="343" width="128" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Statistics"/>
                                 <connections>
                                     <segue destination="fns-fZ-DhW" kind="show" id="H67-L7-FOa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-eV-oq6">
-                                <frame key="frameInset" minX="164" minY="259" width="48" height="30"/>
+                                <frame key="frameInset" minX="135" minY="378" width="109" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Games"/>
                                 <connections>
                                     <segue destination="mNa-Mp-utq" kind="show" id="gvB-sq-odr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2t6-nZ-HFT">
-                                <frame key="frameInset" minX="160" minY="297" width="57" height="30"/>
+                                <frame key="frameInset" minX="131" minY="445" width="118" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="dqT-M4-R0r" appends="YES" id="Moq-gv-jWo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basketball Vision" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-UB-iYA">
+                                <frame key="frameInset" minX="86" minY="28" width="220" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="gamesButton" destination="Dxl-eV-oq6" id="jOW-CO-N0a"/>
+                        <outlet property="settingsButton" destination="2t6-nZ-HFT" id="Q4C-op-f8I"/>
                         <outlet property="signInButton" destination="Vzu-Uk-gpP" id="pjF-Z8-PRa"/>
                         <outlet property="signOutButton" destination="Pgi-I1-NXs" id="TVx-1t-aE7"/>
                         <outlet property="statisticsButton" destination="DZc-J0-ua6" id="kDb-ch-aBa"/>
@@ -96,6 +109,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="127.28635682158921"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hLs-M0-3ga">

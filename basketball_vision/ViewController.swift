@@ -7,6 +7,7 @@
 //
 import UIKit
 import Firebase
+import BluetoothKit
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
     

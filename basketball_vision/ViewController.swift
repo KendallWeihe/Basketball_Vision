@@ -184,7 +184,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, CBCentralManagerDel
         
         let services = [CBUUID(string: DEVICE_INFO_SERVICE_UUID)]
         let centralManager = CBCentralManager(delegate: self, queue: nil)
-        centralManager.scanForPeripheralsWithServices(services, options: nil)
+        centralManager.scanForPeripheralsWithServices(nil, options: nil)
         self.centralManager = centralManager
 
         

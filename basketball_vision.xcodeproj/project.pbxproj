@@ -21,6 +21,8 @@
 		40FC8EBF1DB41B9400A92091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40FC8EBD1DB41B9400A92091 /* LaunchScreen.storyboard */; };
 		40FC8ECA1DB41B9400A92091 /* basketball_visionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8EC91DB41B9400A92091 /* basketball_visionTests.swift */; };
 		40FC8ED51DB41B9400A92091 /* basketball_visionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */; };
+		5FAE3F801DF38F3400AB90E0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAE3F7F1DF38F3400AB90E0 /* CoreBluetooth.framework */; };
+		5FAE3F821DF38F3900AB90E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAE3F811DF38F3900AB90E0 /* QuartzCore.framework */; };
 		5FC5D5781DCE6B1400F43E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC5D5771DCE6B1400F43E7A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		40FC8ED41DB41B9400A92091 /* basketball_visionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketball_visionUITests.swift; sourceTree = "<group>"; };
 		40FC8ED61DB41B9400A92091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528EECC0D646C66C4E741E64 /* Pods-basketball_visionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionTests/Pods-basketball_visionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FAE3F7F1DF38F3400AB90E0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		5FAE3F811DF38F3900AB90E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5FC5D5771DCE6B1400F43E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72461171856C11117D715EA5 /* Pods-basketball_visionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_visionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_visionUITests/Pods-basketball_visionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC242BEEB26467BC2E8C131 /* Pods-basketball_vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-basketball_vision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-basketball_vision/Pods-basketball_vision.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FAE3F821DF38F3900AB90E0 /* QuartzCore.framework in Frameworks */,
+				5FAE3F801DF38F3400AB90E0 /* CoreBluetooth.framework in Frameworks */,
 				3C835ED2A3A8C987D811548D /* Pods_basketball_vision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +170,8 @@
 		D0B1A7810B60DE2C257C57EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5FAE3F811DF38F3900AB90E0 /* QuartzCore.framework */,
+				5FAE3F7F1DF38F3400AB90E0 /* CoreBluetooth.framework */,
 				999D6EC5335F077BE0B0FC71 /* Pods_basketball_vision.framework */,
 				AE7D38F2EF021E2A70629AA1 /* Pods_basketball_visionTests.framework */,
 				9750507EA38B38E75B7965D1 /* Pods_basketball_visionUITests.framework */,

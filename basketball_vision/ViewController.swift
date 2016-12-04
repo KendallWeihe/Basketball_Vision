@@ -7,9 +7,10 @@
 //
 import UIKit
 import Firebase
-import BluetoothKit
+import CoreBluetooth
+import QuartzCore
 
-class ViewController: UIViewController, GIDSignInUIDelegate {
+class ViewController: UIViewController, GIDSignInUIDelegate, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     // declare global variables to be used throughout the application -- user information
     var userID = String()
@@ -26,6 +27,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var statisticsButton: UIButton!
     @IBOutlet weak var gamesButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    
+    // define bluetooth services and charachteristics
+    let DEVICE_INFO_SERVICE_UUID = "180A"
+    let MANUFACTURER_NAME_CHARACTERISTIC_UUID = "2A29"
+    
+    var centralManager: CBCentralManager!
+    var rasperryPI: CBPeripheral!
     
     // action to handle when the user tapped Sign In
     @IBAction func tappedSignIn(sender: UITapGestureRecognizer) {
@@ -173,6 +181,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         statusText.text = ""
         toggleAuthUI()
         print("viewDidLoad()")
+        
+        let services = [CBUUID(string: DEVICE_INFO_SERVICE_UUID)]
+        let centralManager = CBCentralManager(delegate: self, queue: nil)
+        centralManager.scanForPeripheralsWithServices(services, options: nil)
+        self.centralManager = centralManager
+
+        
         // [END_EXCLUDE]
     }
     // [END viewdidload]
@@ -204,6 +219,56 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     // [END receiveToggleAuthUINotification]
 
     
+    // MARK: - CBCentralManagerDelegate
+    
+    func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
+        
+    }
+    
+    func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
+        
+        let localName = advertisementData[CBAdvertisementDataLocalNameKey]
+        if localName?.length > 0 {
+            print("found the raspberry pi: \(localName)")
+            centralManager.stopScan()
+            rasperryPI = peripheral
+            peripheral.delegate = self
+            centralManager.connectPeripheral(peripheral, options: nil)
+        }
+    }
+    
+    func centralManagerDidUpdateState(central: CBCentralManager) {
+        // get the state
+        if central.state == .PoweredOff {
+            print("CoreBluetooth BLE hardware is powered off")
+        } else if central.state == .PoweredOn {
+            print("CoreBluetooh BLE hardware is powered on")
+        } else if central.state == .Unauthorized {
+            print("CoreBluetooh BLE hardware is unauthorized")
+        } else if central.state == .Unknown {
+            print("CoreBluetooh BLE hardware is unknown")
+        } else if central.state == .Unsupported {
+            print("CoreBluetooh BLE hardware is unsupported")
+        }
+    
+    }
+    
+    // MARK: - CBPeripheralDelegate
+    
+    func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
+    }
+    
+    func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
+    }
+    
+    func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+    }
+    
+    // MARK: - CBCharacteristics helpers
+    
+    func getManufaturerName(characteristic: CBCharacteristic) {
+    }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
